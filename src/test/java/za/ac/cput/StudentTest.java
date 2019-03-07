@@ -23,6 +23,7 @@ public class StudentTest {
 
      System.out.println("Computing "+factirialOf+" ! = ");
         String studentDetails = "Yolanda, YM1996, IT, Megan";
+
         Student stud = new Student();
 
         Assert.assertEquals(studentDetails, stud.names("Yolanda, ","YM1996, ", "IT, ", "Megan"));
