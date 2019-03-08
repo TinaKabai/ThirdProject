@@ -9,23 +9,26 @@ import static org.junit.Assert.*;
 
 public class StudentTest {
 
+    Student s;
     @Before
     public void setUp() throws Exception {
+        s = new Student.Builder().name("Yolanda").studID("YM201596").course("IT").build();
     }
 
     @After
     public void tearDown() throws Exception {
     }
     @Ignore
-    @Test(timeout = 1000)
+
+    @Test
     public void testWithTimeout(){
-     final int factirialOf = 1 + (int)(30000 *Math.random());
+     //final int factirialOf = 1 + (int)(30000 *Math.random());
 
-     System.out.println("Computing "+factirialOf+" ! = ");
-        String studentDetails = "Yolanda, YM1996, IT, Megan";
+     //System.out.println("Computing "+factirialOf+" ! = ");
+        String studentDetails = "Yolanda, YM201596, IT, Megan";
 
-        Student stud = new Student();
-
-        Assert.assertEquals(studentDetails, stud.names("Yolanda, ","YM1996, ", "IT, ", "Megan"));
+       // Student stud = new Student();
+        Assert.assertEquals(studentDetails, s);
     }
+
 }
