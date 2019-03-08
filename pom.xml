@@ -7,6 +7,7 @@
   <groupId>za.ac.cput</groupId>
   <artifactId>tins</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <name>tins</name>
   <!-- FIXME change it to the project's website -->
