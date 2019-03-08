@@ -1,34 +1,23 @@
 package za.ac.cput;
 
 import org.junit.*;
-import sun.plugin.com.Utils;
-import javax.rmi.CORBA.Util;
-import javax.rmi.CORBA.UtilDelegate;
-import java.util.ArrayList;
-import static org.junit.Assert.*;
+
 
 public class StudentTest {
 
-    Student s;
-    @Before
-    public void setUp() throws Exception {
-        s = new Student.Builder().name("Yolanda").studID("YM201596").course("IT").build();
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
     @Ignore
-
     @Test
-    public void testWithTimeout(){
-     //final int factirialOf = 1 + (int)(30000 *Math.random());
+    public void student(){
 
-     //System.out.println("Computing "+factirialOf+" ! = ");
-        String studentDetails = "Yolanda, YM201596, IT, Megan";
+        String studentDetails = "Yolanda, YM201596, IT, Meghan";
 
-       // Student stud = new Student();
-        Assert.assertEquals(studentDetails, s);
+        Student s = new Student();
+        Assert.assertEquals(studentDetails, s.student("Yolanda, ", "YM201596, ","IT, ","Meghan"));
     }
-
+    @Test(timeout = 60)
+    public void testWithTimeout(){
+        while(true){
+            System.out.printf("Tested timeout");
+        }
+    }
 }
