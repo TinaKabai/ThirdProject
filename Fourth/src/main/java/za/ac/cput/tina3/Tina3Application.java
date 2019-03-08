@@ -8,6 +8,7 @@ public class Tina3Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Tina3Application.class, args);
+        Student s = new Student();
+        s.marks(89);
     }
-
 }
