@@ -11,4 +11,5 @@ public class DemoApplication {
         Student s = new Student();
         s.marks(89);
     }
+
 }
